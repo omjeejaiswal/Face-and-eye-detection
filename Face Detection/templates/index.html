@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Streaming</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(220, 220, 220);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .col {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Heading styling */
+        h3 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        /* Image styling */
+        #stream-image {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        /* Button styling */
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Margin top class */
+        .mt {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="mt">Live Streaming</h3>
+                <img id="stream-image" src="{{ url_for('video_feed') }}" width="50%">
+                <button id="capture-btn" class="btn btn-primary mt-3">Capture Photo</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
